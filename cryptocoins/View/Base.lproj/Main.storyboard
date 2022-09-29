@@ -21,6 +21,12 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4r-XN-ZLy" userLabel="HeaderView">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="384"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guT-2G-P4b">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="40"/>
+                                                <color key="textColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotação atual" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i9-xU-xKF">
                                                 <rect key="frame" x="0.0" y="40" width="374" height="40"/>
                                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
@@ -31,12 +37,6 @@
                                                 <rect key="frame" x="0.0" y="120" width="374" height="36"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                 <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guT-2G-P4b">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="40"/>
-                                                <color key="textColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -78,6 +78,11 @@
                             <constraint firstItem="PbV-KM-mmj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sZt-FX-9if"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coinNameLabel" destination="guT-2G-P4b" id="u6h-wS-HpA"/>
+                        <outlet property="currencyPicker" destination="7T3-Lu-IAK" id="cNz-hj-E1s"/>
+                        <outlet property="resultLabel" destination="7sr-vd-dRz" id="nhJ-IJ-jt6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
