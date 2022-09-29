@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="cryptocoins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-KM-mmj">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4r-XN-ZLy" userLabel="HeaderView">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="384"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotação atual" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i9-xU-xKF">
+                                                <rect key="frame" x="0.0" y="40" width="374" height="40"/>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
+                                                <color key="textColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120.22 USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sr-vd-dRz">
+                                                <rect key="frame" x="0.0" y="120" width="374" height="36"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                                <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guT-2G-P4b">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="40"/>
+                                                <color key="textColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9i9-xU-xKF" firstAttribute="top" secondItem="guT-2G-P4b" secondAttribute="bottom" id="G0e-o0-SgY"/>
+                                            <constraint firstItem="guT-2G-P4b" firstAttribute="leading" secondItem="f4r-XN-ZLy" secondAttribute="leading" id="O3g-YY-Cqz"/>
+                                            <constraint firstItem="9i9-xU-xKF" firstAttribute="leading" secondItem="f4r-XN-ZLy" secondAttribute="leading" id="Rft-a5-0iO"/>
+                                            <constraint firstAttribute="trailing" secondItem="guT-2G-P4b" secondAttribute="trailing" id="eSb-6R-7VF"/>
+                                            <constraint firstAttribute="trailing" secondItem="7sr-vd-dRz" secondAttribute="trailing" id="gwz-Sd-dQP"/>
+                                            <constraint firstAttribute="trailing" secondItem="9i9-xU-xKF" secondAttribute="trailing" id="jV6-yF-23G"/>
+                                            <constraint firstItem="7sr-vd-dRz" firstAttribute="leading" secondItem="f4r-XN-ZLy" secondAttribute="leading" id="onX-yA-AUw"/>
+                                            <constraint firstItem="7sr-vd-dRz" firstAttribute="top" secondItem="9i9-xU-xKF" secondAttribute="bottom" constant="40" id="yfz-XR-A7j"/>
+                                            <constraint firstItem="guT-2G-P4b" firstAttribute="top" secondItem="f4r-XN-ZLy" secondAttribute="top" id="yht-yy-H9k"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqR-Vy-8CO" userLabel="FooterView">
+                                        <rect key="frame" x="0.0" y="394" width="374" height="384"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T3-Lu-IAK">
+                                                <rect key="frame" x="0.0" y="158" width="374" height="216"/>
+                                                <color key="tintColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="7T3-Lu-IAK" firstAttribute="leading" secondItem="kqR-Vy-8CO" secondAttribute="leading" id="NE2-Nl-Hrg"/>
+                                            <constraint firstAttribute="bottom" secondItem="7T3-Lu-IAK" secondAttribute="bottom" constant="10" id="UyJ-B4-3uE"/>
+                                            <constraint firstAttribute="trailing" secondItem="7T3-Lu-IAK" secondAttribute="trailing" id="bb1-dW-hg6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.0" green="0.67843137254901964" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PbV-KM-mmj" secondAttribute="bottom" constant="20" id="4iG-6u-UIo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PbV-KM-mmj" secondAttribute="trailing" constant="20" id="B7C-dz-feR"/>
+                            <constraint firstItem="PbV-KM-mmj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CPx-CB-IDe"/>
+                            <constraint firstItem="PbV-KM-mmj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="sZt-FX-9if"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="71.651785714285708"/>
         </scene>
     </scenes>
 </document>
