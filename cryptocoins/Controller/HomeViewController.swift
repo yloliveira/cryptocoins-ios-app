@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         currencyPicker.dataSource = self
+        currencyPicker.delegate = self
     }
 }
 
@@ -36,3 +37,10 @@ extension HomeViewController: UIPickerViewDataSource {
     }
 }
 
+//MARK: - UIPickerViewDelegate
+
+extension HomeViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(currenciesArray[row])
+    }
+}
