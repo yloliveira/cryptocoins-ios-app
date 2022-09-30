@@ -33,7 +33,7 @@
                                                 <color key="textColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120.22 USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sr-vd-dRz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sr-vd-dRz">
                                                 <rect key="frame" x="0.0" y="120" width="374" height="36"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                 <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,13 +56,13 @@
                                         <rect key="frame" x="0.0" y="394" width="374" height="384"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T3-Lu-IAK">
-                                                <rect key="frame" x="0.0" y="158" width="374" height="216"/>
+                                                <rect key="frame" x="0.0" y="168" width="374" height="216"/>
                                                 <color key="tintColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </pickerView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="7T3-Lu-IAK" firstAttribute="leading" secondItem="kqR-Vy-8CO" secondAttribute="leading" id="NE2-Nl-Hrg"/>
-                                            <constraint firstAttribute="bottom" secondItem="7T3-Lu-IAK" secondAttribute="bottom" constant="10" id="UyJ-B4-3uE"/>
+                                            <constraint firstAttribute="bottom" secondItem="7T3-Lu-IAK" secondAttribute="bottom" id="UyJ-B4-3uE"/>
                                             <constraint firstAttribute="trailing" secondItem="7T3-Lu-IAK" secondAttribute="trailing" id="bb1-dW-hg6"/>
                                         </constraints>
                                     </view>

@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
         coinManager.delegate = self
+        coinManager.fetchCoinValueBy(currency: coinManager.currenciesArray[0])
     }
 }
 
