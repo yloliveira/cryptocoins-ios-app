@@ -50,6 +50,8 @@ extension HomeViewController: UIPickerViewDelegate {
 
 extension HomeViewController: CoinManagerDelegate {
     func coinManagerDidFetchExchangeRateData(_ coinManager: CoinManager, _ coinExchangeRate: CoinExchangeRate) {
-        print(coinExchangeRate)
+        DispatchQueue.main.async {
+            self.resultLabel.text = coinExchangeRate.rateString
+        }
     }
 }
