@@ -11,15 +11,27 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var coinNameLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     var coinManager = CoinManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startLoading()
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
         coinManager.delegate = self
         coinManager.fetchCoinValueBy(currency: coinManager.currenciesArray[0])
+    }
+    
+    func startLoading() {
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
+    }
+    
+    func stopLoading() {
+        loadingIndicator.isHidden = true
+        loadingIndicator.stopAnimating()
     }
 }
 
@@ -43,6 +55,7 @@ extension HomeViewController: UIPickerViewDataSource {
 
 extension HomeViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        startLoading()
         coinManager.fetchCoinValueBy(currency: coinManager.currenciesArray[row])
     }
 }
@@ -53,6 +66,7 @@ extension HomeViewController: CoinManagerDelegate {
     func coinManagerDidFetchExchangeRateData(_ coinManager: CoinManager, _ coinExchangeRate: CoinExchangeRate) {
         DispatchQueue.main.async {
             self.resultLabel.text = coinExchangeRate.rateString
+            self.stopLoading()
         }
     }
 }
