@@ -41,6 +41,6 @@ extension HomeViewController: UIPickerViewDataSource {
 
 extension HomeViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(coinManager.currenciesArray[row])
+        coinManager.fetchCoinValueBy(currency: coinManager.currenciesArray[row])
     }
 }

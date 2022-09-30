@@ -68,9 +68,9 @@
 		C4A3356628E60DAF008218D5 /* cryptocoins */ = {
 			isa = PBXGroup;
 			children = (
-				C4139BC828E7296100D23CDE /* Model */,
 				C4A3356728E60DAF008218D5 /* AppDelegate.swift */,
 				C4A3356928E60DAF008218D5 /* SceneDelegate.swift */,
+				C4139BC828E7296100D23CDE /* Model */,
 				C4A3357B28E60DF3008218D5 /* Controller */,
 				C4A3357C28E60E0C008218D5 /* View */,
 				C4A3357028E60DB4008218D5 /* Assets.xcassets */,
