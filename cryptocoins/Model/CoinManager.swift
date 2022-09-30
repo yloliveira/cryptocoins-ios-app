@@ -15,11 +15,14 @@ protocol CoinManagerDelegate {
 struct CoinManager {
     private let COINAPI_KEY = Bundle.main.infoDictionary?["COINAPI_KEY"] as! String
     private let COINAPI_BASE_URL = "https://rest.coinapi.io/v1/exchangerate"
+    
+    let coinsArray = ["BTC", "ETH","BNB","XRP","DOGE","USDT","ADA","DOT","LTC","BCH"]
     let currenciesArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
+    
     var delegate: CoinManagerDelegate?
     
-    func fetchCoinValueBy(currency: String) {
-        let url = "\(COINAPI_BASE_URL)/BTC/\(currency)?apikey=\(COINAPI_KEY)"
+    func fetchCoinValueBy(coin: String, currency: String) {
+        let url = "\(COINAPI_BASE_URL)/\(coin)/\(currency)?apikey=\(COINAPI_KEY)"
         performRequest(with: url) { (data, response, error) in
             if error != nil {
                 delegate?.coinManagerDidFailWithError(error!)

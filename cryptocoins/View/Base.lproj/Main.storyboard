@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,41 +12,41 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="cryptocoins" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-KM-mmj">
-                                <rect key="frame" x="20" y="20" width="280" height="460"/>
+                                <rect key="frame" x="20" y="64" width="335" height="714"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4r-XN-ZLy" userLabel="HeaderView">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="225"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="352"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guT-2G-P4b">
-                                                <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotação atual" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guT-2G-P4b" userLabel="Cotacao Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="40"/>
                                                 <fontDescription key="fontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="40"/>
                                                 <color key="textColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotação atual" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i9-xU-xKF">
-                                                <rect key="frame" x="0.0" y="40" width="280" height="40"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i9-xU-xKF">
+                                                <rect key="frame" x="0.0" y="50" width="335" height="40"/>
                                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="40"/>
                                                 <color key="textColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sr-vd-dRz">
-                                                <rect key="frame" x="0.0" y="120" width="280" height="36"/>
+                                                <rect key="frame" x="0.0" y="130" width="335" height="36"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                 <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="P95-XI-M6u">
-                                                <rect key="frame" x="121.5" y="176" width="37" height="37"/>
+                                                <rect key="frame" x="149" y="186" width="37" height="37"/>
                                                 <color key="color" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </activityIndicatorView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="P95-XI-M6u" firstAttribute="centerX" secondItem="f4r-XN-ZLy" secondAttribute="centerX" id="Bfx-a4-mo1"/>
-                                            <constraint firstItem="9i9-xU-xKF" firstAttribute="top" secondItem="guT-2G-P4b" secondAttribute="bottom" id="G0e-o0-SgY"/>
+                                            <constraint firstItem="9i9-xU-xKF" firstAttribute="top" secondItem="guT-2G-P4b" secondAttribute="bottom" constant="10" id="G0e-o0-SgY"/>
                                             <constraint firstItem="guT-2G-P4b" firstAttribute="leading" secondItem="f4r-XN-ZLy" secondAttribute="leading" id="O3g-YY-Cqz"/>
                                             <constraint firstItem="9i9-xU-xKF" firstAttribute="leading" secondItem="f4r-XN-ZLy" secondAttribute="leading" id="Rft-a5-0iO"/>
                                             <constraint firstAttribute="trailing" secondItem="guT-2G-P4b" secondAttribute="trailing" id="eSb-6R-7VF"/>
@@ -59,10 +59,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqR-Vy-8CO" userLabel="FooterView">
-                                        <rect key="frame" x="0.0" y="235" width="280" height="225"/>
+                                        <rect key="frame" x="0.0" y="362" width="335" height="352"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7T3-Lu-IAK">
-                                                <rect key="frame" x="0.0" y="9" width="280" height="216"/>
+                                                <rect key="frame" x="0.0" y="136" width="335" height="216"/>
                                                 <color key="tintColor" red="0.1065746918" green="0.13430455329999999" blue="0.1615768373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </pickerView>
                                         </subviews>
@@ -85,7 +85,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="coinNameLabel" destination="guT-2G-P4b" id="u6h-wS-HpA"/>
+                        <outlet property="coinNameLabel" destination="9i9-xU-xKF" id="mb8-Re-WLo"/>
                         <outlet property="currencyPicker" destination="7T3-Lu-IAK" id="cNz-hj-E1s"/>
                         <outlet property="loadingIndicator" destination="P95-XI-M6u" id="Yyn-GO-juA"/>
                         <outlet property="resultLabel" destination="7sr-vd-dRz" id="nhJ-IJ-jt6"/>
