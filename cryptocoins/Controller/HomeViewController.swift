@@ -69,4 +69,8 @@ extension HomeViewController: CoinManagerDelegate {
             self.stopLoading()
         }
     }
+    
+    func coinManagerDidFailWithError(_ error: Error) {
+        stopLoading()
+    }
 }

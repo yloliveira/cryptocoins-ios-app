@@ -9,6 +9,7 @@ import Foundation
 
 protocol CoinManagerDelegate {
     func coinManagerDidFetchExchangeRateData(_ coinManager: CoinManager, _ coinExchangeRate: CoinExchangeRate) -> Void
+    func coinManagerDidFailWithError(_ error: Error) -> Void
 }
 
 struct CoinManager {
@@ -21,7 +22,7 @@ struct CoinManager {
         let url = "\(COINAPI_BASE_URL)/BTC/\(currency)?apikey=\(COINAPI_KEY)"
         performRequest(with: url) { (data, response, error) in
             if error != nil {
-                print(error!)
+                delegate?.coinManagerDidFailWithError(error!)
                 return
             }
             if let safeData = data {
@@ -48,7 +49,7 @@ struct CoinManager {
             let decodedData = try decoder.decode(CoinApiExchangeRateData.self, from: data)
             return decodedData
         } catch {
-            print(error)
+            delegate?.coinManagerDidFailWithError(error)
             return nil
         }
     }
