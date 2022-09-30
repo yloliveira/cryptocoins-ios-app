@@ -7,10 +7,15 @@
 
 import Foundation
 
+protocol CoinManagerDelegate {
+    func coinManagerDidFetchExchangeRateData(_ coinManager: CoinManager, _ coinExchangeRate: CoinExchangeRate) -> Void
+}
+
 struct CoinManager {
     private let COINAPI_KEY = Bundle.main.infoDictionary?["COINAPI_KEY"] as! String
     private let COINAPI_BASE_URL = "https://rest.coinapi.io/v1/exchangerate"
     let currenciesArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
+    var delegate: CoinManagerDelegate?
     
     func fetchCoinValueBy(currency: String) {
         let url = "\(COINAPI_BASE_URL)/BTC/\(currency)?apikey=\(COINAPI_KEY)"
@@ -22,7 +27,7 @@ struct CoinManager {
             if let safeData = data {
                 if let decodedData = self.parseJSON(safeData) {
                     let exchangeRate = CoinExchangeRate(rate: decodedData.rate, currency: decodedData.asset_id_quote, coin: decodedData.asset_id_base)
-                    print(exchangeRate)
+                    delegate?.coinManagerDidFetchExchangeRateData(self, exchangeRate)
                 }
             }
         }

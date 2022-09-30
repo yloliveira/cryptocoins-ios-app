@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
+        coinManager.delegate = self
     }
 }
 
@@ -42,5 +43,13 @@ extension HomeViewController: UIPickerViewDataSource {
 extension HomeViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         coinManager.fetchCoinValueBy(currency: coinManager.currenciesArray[row])
+    }
+}
+
+//MARK: - CoinManagerDelegate
+
+extension HomeViewController: CoinManagerDelegate {
+    func coinManagerDidFetchExchangeRateData(_ coinManager: CoinManager, _ coinExchangeRate: CoinExchangeRate) {
+        print(coinExchangeRate)
     }
 }
