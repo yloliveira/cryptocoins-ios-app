@@ -19,8 +19,11 @@ struct CoinManager {
                 print(error!)
                 return
             }
-            if data != nil {
-                print(data!)
+            if let safeData = data {
+                if let decodedData = self.parseJSON(safeData) {
+                    let exchangeRate = CoinExchangeRate(rate: decodedData.rate, currency: decodedData.asset_id_quote, coin: decodedData.asset_id_base)
+                    print(exchangeRate)
+                }
             }
         }
     }
@@ -31,6 +34,17 @@ struct CoinManager {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: request, completionHandler: handler)
             task.resume()
+        }
+    }
+    
+    private func parseJSON(_ data: Data) -> CoinApiExchangeRateData? {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(CoinApiExchangeRateData.self, from: data)
+            return decodedData
+        } catch {
+            print(error)
+            return nil
         }
     }
 }
